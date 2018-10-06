@@ -1,0 +1,87 @@
+/* line 17, ../sass/style.scss */
+body {
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-attachment: fixed;
+}
+
+/* line 26, ../sass/style.scss */
+.container {
+  margin-bottom: 50px;
+}
+
+/* line 29, ../sass/style.scss */
+.navbar {
+  background: linear-gradient(-30deg, rgba(255, 255, 255, 0), rgba(61, 32, 99, 0.15) 20%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 50%, rgba(105, 208, 255, 0.15) 60%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0));
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
+}
+/* line 33, ../sass/style.scss */
+.navbar span {
+  color: floralwhite;
+}
+
+/* line 37, ../sass/style.scss */
+.card-deck {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* line 41, ../sass/style.scss */
+.shop .card {
+  background: linear-gradient(-30deg, rgba(255, 255, 255, 0), rgba(61, 32, 99, 0.15) 20%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 50%, rgba(105, 208, 255, 0.15) 60%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0));
+  margin-top: 50px;
+  border-radius: 25px;
+  border-width: 4px;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3), -3px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* line 49, ../sass/style.scss */
+.wrapper-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* line 53, ../sass/style.scss */
+.card-img-top {
+  max-width: 70%;
+  margin: 0 auto;
+  filter: drop-shadow(-7px 6px 3px rgba(0, 0, 0, 0.3));
+}
+
+/* line 58, ../sass/style.scss */
+.card-title {
+  color: floralwhite;
+  font-family: 'Kanit', sans-serif;
+  font-size: 22px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: -7px 7px 2px rgba(0, 0, 0, 0.3), 1px 1px 1px rgba(0, 0, 0, 0.5), -1px 1px 1px rgba(0, 0, 0, 0.5), 1px -1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* line 78, ../sass/style.scss */
+  .shop {
+    flex-direction: row-reverse;
+  }
+
+  /* line 81, ../sass/style.scss */
+  .card-deck {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767.98px) {
+  /* line 87, ../sass/style.scss */
+  .shop {
+    flex-direction: row-reverse;
+  }
+
+  /* line 90, ../sass/style.scss */
+  .shop .card-deck {
+    display: flex;
+    flex-direction: column;
+  }
+}
