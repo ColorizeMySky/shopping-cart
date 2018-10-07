@@ -1,18 +1,51 @@
+$textShadow: 1px 1px 1px rgba(0, 0, 0, 0.5),
+			 -1px 1px 1px rgba(0, 0, 0, 0.5),
+			 1px -1px 1px rgba(0, 0, 0, 0.5),
+			 -1px -1px 1px rgba(0, 0, 0, 0.5);
+
 @mixin flexCenter {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+@mixin fullSize($px) {
+	position: absolute;
+	top: $px;
+	right: $px;
+	bottom: $px;
+	left: $px;	
+}
 @mixin glassGradient {
-	background: linear-gradient(-30deg, 
+	background: linear-gradient(-45deg, 
 	        rgba(255, 255, 255, 0),
+	        rgba(255, 255, 255, 0.4) 10%,
+	        rgba(255, 255, 255, 0.1) 15%,
 	        rgba(61, 32, 99, 0.15) 20%,
 	        rgba(255, 255, 255, 0.2) 40%,
 	        rgba(255, 255, 255, 0.1) 50%,
 	        rgba(105, 208, 255, 0.15) 60%,
-	        rgba(255, 255, 255, 0.2) 80%,
+	        rgba(255, 255, 255, 0.5) 75%,
+	        rgba(255, 255, 255, 0.2) 85%,
 	        rgba(255, 255, 255, 0));
 }
+@mixin innerShadow {
+	box-shadow: inset 0 0 2px 1px #000,
+				inset 0 0 5px 1px rgba(255, 255, 255, 0.3);
+}
+@mixin metallHolders {	
+	@include innerShadow;
+	content: "";
+	position: absolute;
+	width: calc(100% + 10px);
+	margin-left: -5px;
+	height: 20%;
+	background-color: #fff;
+	z-index: 5;
+	border: 2px solid rgb(70, 70, 80);
+	//background-image: url('http://365psd.ru/images/backgrounds/skull.jpg');
+	background-image: url('http://365psd.ru/images/backgrounds/metall-pat-005.jpg');
+}
+
 
 body {
 	background: {
@@ -22,6 +55,9 @@ body {
         position-x: center;
         attachment: fixed;
     }
+}
+p {
+	text-shadow: -3px 3px rgba(0, 0, 0, 0.5), $textShadow;
 }
 .container {
 	margin-bottom: 50px;
@@ -40,15 +76,44 @@ body {
 }
 .shop .card {
 	@include glassGradient;
+	position: relative;
 	margin-top: 50px;
 	border-radius: 25px;
 	border-width: 4px;
 	box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3),
 				-3px 3px 1px rgba(0, 0, 0, 0.2);
+    color: floralwhite;
+
+	&::before {
+		@include metallHolders;
+		top: -5px;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+		border-top-left-radius: 25px;
+		border-top-right-radius: 25px;
+	}
+	&::after {
+		@include metallHolders;
+		bottom: -5px;
+		clip-path: polygon(0 0%, 100% 50%, 100% 100%, 0% 100%);
+		border-bottom-left-radius: 25px;
+		border-bottom-right-radius: 25px;
+	}
+
+	.card-body {
+		margin-bottom: 50px;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	&:nth-of-type(6) .wrapper-img {
+	    transform: scaleY(0.8);
+	}
 }
 .wrapper-img {
 	@include flexCenter;
-	margin-top: 20px;
+	margin-top: 40px;
 }
 .card-img-top {
 	max-width: 70%;
@@ -56,7 +121,6 @@ body {
     filter: drop-shadow(-7px 6px 3px rgba(0, 0, 0, 0.3));
 }
 .card-title {
-	color: floralwhite;
 	font: {
 		family: 'Kanit', sans-serif;
 		size: 22px;
@@ -64,12 +128,71 @@ body {
 	text: {
 		align: center;
 		transform: uppercase;
-		shadow: -7px 7px 2px rgba(0, 0, 0, 0.3),
-				1px 1px 1px rgba(0, 0, 0, 0.5),
-				-1px 1px 1px rgba(0, 0, 0, 0.5),
-				1px -1px 1px rgba(0, 0, 0, 0.5),
-				-1px -1px 1px rgba(0, 0, 0, 0.5);
+		shadow: -7px 7px 2px rgba(0, 0, 0, 0.3), $textShadow;
 	}
+}
+.button-holder {
+	display: flex;
+	justify-content: flex-end;
+}
+.cart {
+	position: relative;
+	transition-duration: 0.5s;
+
+    &:hover {
+		transform: scale(1.1);
+    }
+    &:focus, &:active {
+    	img {
+			filter: drop-shadow(1px 1px rgba(255, 255, 255, 0.0));
+			transform: scale(0.9);
+    	}
+    }
+
+	img {
+	max-width: 50px;
+	height: auto;	
+	margin-top: -30px;
+    filter: drop-shadow(1px 1px rgba(255, 255, 255, 0.3));
+	}
+}
+.details {
+	position: absolute;
+	width: 100%;
+	bottom: 15px;
+	text-align: center;
+	cursor: pointer;
+	z-index: 6;
+}
+.shadow-for-holder {
+	@include fullSize(0px);
+	box-shadow: inset 0 -20px 20px -15px #000, inset 0 20px 20px -15px #000;
+    transform: skewY(10deg) scaleY(0.73);
+    pointer-events: none;
+    z-index: 10;
+}
+.backside {
+	@include innerShadow;
+	@include fullSize(-5px);
+    padding: 1.25rem;
+	background: linear-gradient(-82deg, #252527, #252527 40%, #2f2f31 41%);
+	border-radius: 25px;
+	border: 2px solid rgb(70, 70, 80);
+	transition-delay: 1.2s;
+}
+
+.change-view {
+	&::before, &::after {
+		animation: closeHolders 3s forwards;
+	}
+}
+.change-view-back {
+	&::before, &::after {
+		animation: openHolders 3s forwards;
+	}
+}
+.invisible {
+	opacity: 0;
 }
 
 
@@ -92,4 +215,37 @@ body {
 		flex-direction: column;
 	}
 
+}
+
+//KEYFRAMES: ;
+@keyframes closeHolders {
+	0% {
+		height: 20%;
+	}
+	50% {
+		height: 69%;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		height: 0%;
+		opacity: 0;
+	}
+}
+
+@keyframes openHolders {
+	0% {
+		height: 0%;
+		opacity: 0;
+	}
+	10% {
+		opacity: 1;
+	}
+	50% {
+		height: 69%;
+	}
+	100% {
+		height: 20%;
+	}
 }

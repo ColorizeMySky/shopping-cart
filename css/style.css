@@ -1,4 +1,4 @@
-/* line 17, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 body {
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
@@ -7,54 +7,106 @@ body {
   background-attachment: fixed;
 }
 
-/* line 26, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
+p {
+  text-shadow: -3px 3px rgba(0, 0, 0, 0.5), 1px 1px 1px rgba(0, 0, 0, 0.5), -1px 1px 1px rgba(0, 0, 0, 0.5), 1px -1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* line 62, ../sass/style.scss */
 .container {
   margin-bottom: 50px;
 }
 
-/* line 29, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 .navbar {
-  background: linear-gradient(-30deg, rgba(255, 255, 255, 0), rgba(61, 32, 99, 0.15) 20%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 50%, rgba(105, 208, 255, 0.15) 60%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0));
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.1) 15%, rgba(61, 32, 99, 0.15) 20%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 50%, rgba(105, 208, 255, 0.15) 60%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.2) 85%, rgba(255, 255, 255, 0));
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
 }
-/* line 33, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 .navbar span {
   color: floralwhite;
 }
 
-/* line 37, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 .card-deck {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* line 41, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 .shop .card {
-  background: linear-gradient(-30deg, rgba(255, 255, 255, 0), rgba(61, 32, 99, 0.15) 20%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 50%, rgba(105, 208, 255, 0.15) 60%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0));
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.1) 15%, rgba(61, 32, 99, 0.15) 20%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 50%, rgba(105, 208, 255, 0.15) 60%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.2) 85%, rgba(255, 255, 255, 0));
+  position: relative;
   margin-top: 50px;
   border-radius: 25px;
   border-width: 4px;
   box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3), -3px 3px 1px rgba(0, 0, 0, 0.2);
+  color: floralwhite;
+}
+/* line 87, ../sass/style.scss */
+.shop .card::before {
+  box-shadow: inset 0 0 2px 1px #000, inset 0 0 5px 1px rgba(255, 255, 255, 0.3);
+  content: "";
+  position: absolute;
+  width: calc(100% + 10px);
+  margin-left: -5px;
+  height: 20%;
+  background-color: #fff;
+  z-index: 5;
+  border: 2px solid #464650;
+  background-image: url("http://365psd.ru/images/backgrounds/metall-pat-005.jpg");
+  top: -5px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+/* line 94, ../sass/style.scss */
+.shop .card::after {
+  box-shadow: inset 0 0 2px 1px #000, inset 0 0 5px 1px rgba(255, 255, 255, 0.3);
+  content: "";
+  position: absolute;
+  width: calc(100% + 10px);
+  margin-left: -5px;
+  height: 20%;
+  background-color: #fff;
+  z-index: 5;
+  border: 2px solid #464650;
+  background-image: url("http://365psd.ru/images/backgrounds/metall-pat-005.jpg");
+  bottom: -5px;
+  clip-path: polygon(0 0%, 100% 50%, 100% 100%, 0% 100%);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+/* line 102, ../sass/style.scss */
+.shop .card .card-body {
+  margin-bottom: 50px;
+}
+/* line 105, ../sass/style.scss */
+.shop .card .card-body p {
+  margin-bottom: 0;
+}
+/* line 110, ../sass/style.scss */
+.shop .card:nth-of-type(6) .wrapper-img {
+  transform: scaleY(0.8);
 }
 
-/* line 49, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 .wrapper-img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
-/* line 53, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 .card-img-top {
   max-width: 70%;
   margin: 0 auto;
   filter: drop-shadow(-7px 6px 3px rgba(0, 0, 0, 0.3));
 }
 
-/* line 58, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 .card-title {
-  color: floralwhite;
   font-family: 'Kanit', sans-serif;
   font-size: 22px;
   text-align: center;
@@ -62,26 +114,137 @@ body {
   text-shadow: -7px 7px 2px rgba(0, 0, 0, 0.3), 1px 1px 1px rgba(0, 0, 0, 0.5), -1px 1px 1px rgba(0, 0, 0, 0.5), 1px -1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5);
 }
 
+/* line 134, ../sass/style.scss */
+.button-holder {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* line 138, ../sass/style.scss */
+.cart {
+  position: relative;
+  transition-duration: 0.5s;
+}
+/* line 142, ../sass/style.scss */
+.cart:hover {
+  transform: scale(1.1);
+}
+/* line 146, ../sass/style.scss */
+.cart:focus img, .cart:active img {
+  filter: drop-shadow(1px 1px rgba(255, 255, 255, 0));
+  transform: scale(0.9);
+}
+/* line 152, ../sass/style.scss */
+.cart img {
+  max-width: 50px;
+  height: auto;
+  margin-top: -30px;
+  filter: drop-shadow(1px 1px rgba(255, 255, 255, 0.3));
+}
+
+/* line 159, ../sass/style.scss */
+.details {
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 6;
+}
+
+/* line 167, ../sass/style.scss */
+.shadow-for-holder {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  box-shadow: inset 0 -20px 20px -15px #000, inset 0 20px 20px -15px #000;
+  transform: skewY(10deg) scaleY(0.73);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* line 174, ../sass/style.scss */
+.backside {
+  box-shadow: inset 0 0 2px 1px #000, inset 0 0 5px 1px rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  bottom: -5px;
+  left: -5px;
+  padding: 1.25rem;
+  background: linear-gradient(-82deg, #252527, #252527 40%, #2f2f31 41%);
+  border-radius: 25px;
+  border: 2px solid #464650;
+  transition-delay: 1.2s;
+}
+
+/* line 185, ../sass/style.scss */
+.change-view::before, .change-view::after {
+  animation: closeHolders 3s forwards;
+}
+
+/* line 190, ../sass/style.scss */
+.change-view-back::before, .change-view-back::after {
+  animation: openHolders 3s forwards;
+}
+
+/* line 194, ../sass/style.scss */
+.invisible {
+  opacity: 0;
+}
+
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* line 78, ../sass/style.scss */
+  /* line 201, ../sass/style.scss */
   .shop {
     flex-direction: row-reverse;
   }
 
-  /* line 81, ../sass/style.scss */
+  /* line 204, ../sass/style.scss */
   .card-deck {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 767.98px) {
-  /* line 87, ../sass/style.scss */
+  /* line 210, ../sass/style.scss */
   .shop {
     flex-direction: row-reverse;
   }
 
-  /* line 90, ../sass/style.scss */
+  /* line 213, ../sass/style.scss */
   .shop .card-deck {
     display: flex;
     flex-direction: column;
+  }
+}
+@keyframes closeHolders {
+  0% {
+    height: 20%;
+  }
+  50% {
+    height: 69%;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    height: 0%;
+    opacity: 0;
+  }
+}
+@keyframes openHolders {
+  0% {
+    height: 0%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    height: 69%;
+  }
+  100% {
+    height: 20%;
   }
 }
