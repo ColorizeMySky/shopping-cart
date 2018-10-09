@@ -138,6 +138,15 @@ class Cart {
 		$('.shopping').removeClass('appearCart')
 		$('.shopping').addClass('disappearCart');
 	}
+
+	clearCart() {
+		for (var key in this.items) {
+			this.items[key].pieces = 0;
+			$('#' + key + '-info').addClass('d-none');
+		}
+
+		this.interact();
+	}
 }
 
 var myCart = new Cart;
@@ -146,7 +155,8 @@ $('.cart').each(function() {
 	let chooseId = $(this).attr('id');
 	if(chooseId == 'halo') {
 		$(this).on('click', function() {
-			$('.modal').modal();
+			$('#message-text').text('Sorry, temporarily out of stock!');
+			$('#message').modal();
 		});		
 	}
 	else {
@@ -170,4 +180,13 @@ $('.minus').each(function() {
 	$(this).on('click', function() {
 			myCart.removeItem(chooseId);
 		});
+});
+
+
+$('#shipping').submit(function(event) {
+	event.preventDefault();
+	$('#close-shipping').trigger('click');
+	myCart.clearCart();
+	$('#message-text').text('Thank you for order! Have a nice day!');
+	$('#message').modal();
 });

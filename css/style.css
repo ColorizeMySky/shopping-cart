@@ -119,18 +119,19 @@ p {
 /* line 137, ../sass/style.scss */
 .cart {
   position: relative;
+  cursor: pointer;
   transition-duration: 0.5s;
 }
-/* line 141, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 .cart:hover {
   transform: scale(1.1);
 }
-/* line 145, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 .cart:focus img, .cart:active img {
   filter: drop-shadow(1px 1px rgba(255, 255, 255, 0));
   transform: scale(0.9);
 }
-/* line 151, ../sass/style.scss */
+/* line 152, ../sass/style.scss */
 .cart img {
   max-width: 50px;
   height: auto;
@@ -138,7 +139,7 @@ p {
   filter: drop-shadow(1px 1px rgba(255, 255, 255, 0.3));
 }
 
-/* line 158, ../sass/style.scss */
+/* line 159, ../sass/style.scss */
 .details {
   position: absolute;
   width: 100%;
@@ -148,7 +149,7 @@ p {
   z-index: 6;
 }
 
-/* line 166, ../sass/style.scss */
+/* line 167, ../sass/style.scss */
 .shadow-for-holder {
   position: absolute;
   top: 0px;
@@ -161,7 +162,7 @@ p {
   z-index: 10;
 }
 
-/* line 173, ../sass/style.scss */
+/* line 174, ../sass/style.scss */
 .backside {
   box-shadow: inset 0 0 2px 1px #000, inset 0 0 5px 1px rgba(255, 255, 255, 0.3);
   position: absolute;
@@ -176,22 +177,22 @@ p {
   transition-delay: 1.2s;
 }
 
-/* line 184, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 .change-view::before, .change-view::after {
   animation: closeHolders 3s forwards;
 }
 
-/* line 189, ../sass/style.scss */
+/* line 190, ../sass/style.scss */
 .change-view-back::before, .change-view-back::after {
   animation: openHolders 3s forwards;
 }
 
-/* line 193, ../sass/style.scss */
+/* line 194, ../sass/style.scss */
 .invisible {
   opacity: 0;
 }
 
-/* line 197, ../sass/style.scss */
+/* line 198, ../sass/style.scss */
 .shopping {
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.1) 15%, rgba(61, 32, 99, 0.15) 20%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 50%, rgba(105, 208, 255, 0.15) 60%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.2) 85%, rgba(255, 255, 255, 0));
   box-shadow: inset 0 0 2px 1px #000, inset 0 0 5px 1px rgba(255, 255, 255, 0.3);
@@ -200,7 +201,7 @@ p {
   border-radius: 25px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), -1px 1px 1px rgba(0, 0, 0, 0.5), 1px -1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5);
 }
-/* line 205, ../sass/style.scss */
+/* line 206, ../sass/style.scss */
 .shopping h1 {
   font-family: 'Kanit', sans-serif;
   text-align: center;
@@ -208,47 +209,47 @@ p {
   text-shadow: -7px 7px 2px rgba(0, 0, 0, 0.3), 1px 1px 1px rgba(0, 0, 0, 0.5), -1px 1px 1px rgba(0, 0, 0, 0.5), 1px -1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5);
   font-size: 25px;
 }
-/* line 210, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 .shopping hr {
   border-color: rgba(0, 0, 0, 0.3);
 }
 
-/* line 214, ../sass/style.scss */
+/* line 215, ../sass/style.scss */
 .appearCart {
   animation: appearCart 0.7s;
 }
 
-/* line 217, ../sass/style.scss */
+/* line 218, ../sass/style.scss */
 .disappearCart {
   animation: disappearCart 0.7s forwards;
 }
 
-/* line 220, ../sass/style.scss */
+/* line 221, ../sass/style.scss */
 .item-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-/* line 225, ../sass/style.scss */
+/* line 226, ../sass/style.scss */
 .item-info > span:nth-child(1) {
   padding-right: 10px;
 }
-/* line 229, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 .item-info .cost {
   display: inline;
 }
-/* line 232, ../sass/style.scss */
+/* line 233, ../sass/style.scss */
 .item-info .cost img {
   height: 1em;
   margin-top: -0.2em;
   box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-/* line 237, ../sass/style.scss */
+/* line 238, ../sass/style.scss */
 .item-info .cost img:active {
   box-shadow: 0 0 2px black;
 }
 
-/* line 244, ../sass/style.scss */
+/* line 245, ../sass/style.scss */
 .shop .modal-content {
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.1) 15%, rgba(61, 32, 99, 0.15) 20%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 50%, rgba(105, 208, 255, 0.15) 60%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.2) 85%, rgba(255, 255, 255, 0));
   font-family: 'Kanit', sans-serif;
@@ -257,53 +258,90 @@ p {
   text-shadow: -7px 7px 2px rgba(0, 0, 0, 0.3), 1px 1px 1px rgba(0, 0, 0, 0.5), -1px 1px 1px rgba(0, 0, 0, 0.5), 1px -1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5);
   border-radius: 25px;
 }
-/* line 249, ../sass/style.scss */
+/* line 250, ../sass/style.scss */
 .shop .modal-content .modal-title {
   margin-top: 25px;
 }
-/* line 253, ../sass/style.scss */
+/* line 254, ../sass/style.scss */
 .shop .modal-content .close, .shop .modal-content .close:hover {
   color: floralwhite;
   font-size: 3rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), -1px 1px 1px rgba(0, 0, 0, 0.5), 1px -1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5);
   opacity: 1;
 }
-/* line 260, ../sass/style.scss */
+/* line 261, ../sass/style.scss */
 .shop .modal-content button:focus {
   outline: none;
 }
 
+/* line 266, ../sass/style.scss */
+.btn {
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.1) 15%, rgba(61, 32, 99, 0.15) 20%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 50%, rgba(105, 208, 255, 0.15) 60%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.2) 85%, rgba(255, 255, 255, 0));
+  font-family: 'Kanit', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: -7px 7px 2px rgba(0, 0, 0, 0.3), 1px 1px 1px rgba(0, 0, 0, 0.5), -1px 1px 1px rgba(0, 0, 0, 0.5), 1px -1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3), -3px 3px 1px rgba(0, 0, 0, 0.2);
+  color: floralwhite;
+}
+/* line 273, ../sass/style.scss */
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+/* line 277, ../sass/style.scss */
+.btn:active {
+  box-shadow: inset -5px 3px 5px rgba(0, 0, 0, 0.3), inset 5px -3px 3px rgba(255, 255, 255, 0.2);
+}
+
+/* line 282, ../sass/style.scss */
+form {
+  display: flex;
+  flex-direction: column;
+}
+/* line 286, ../sass/style.scss */
+form input {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+/* line 291, ../sass/style.scss */
+.shop .modal-footer {
+  justify-content: flex-start;
+}
+
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* line 268, ../sass/style.scss */
+  /* line 298, ../sass/style.scss */
   .shop {
     flex-direction: row-reverse;
   }
 
-  /* line 271, ../sass/style.scss */
+  /* line 301, ../sass/style.scss */
   .card-deck {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 767.98px) {
-  /* line 277, ../sass/style.scss */
+  /* line 307, ../sass/style.scss */
   .shop {
     flex-direction: row-reverse;
   }
 
-  /* line 280, ../sass/style.scss */
+  /* line 310, ../sass/style.scss */
   .shop .card-deck {
     display: flex;
     flex-direction: column;
   }
 }
 @media (min-width: 992px) {
-  /* line 288, ../sass/style.scss */
+  /* line 318, ../sass/style.scss */
   .shop aside {
     padding-right: 0;
     padding-left: 0;
   }
 
-  /* line 292, ../sass/style.scss */
+  /* line 322, ../sass/style.scss */
   .shopping {
     position: fixed;
   }

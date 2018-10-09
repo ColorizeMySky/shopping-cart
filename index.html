@@ -305,16 +305,53 @@
 						<p class="tax">Tax: <span></span></p>
 						<p class="total">Total Price: <span></span></p>					
 					</div>
+
+					<hr>
+
+					<button type="button" class="btn" data-toggle="modal" data-target="#continue">Continue</button>
 				</div>
 			</aside>
 
-			<div class="modal" tabindex="-1" role="dialog">
+			<!-- modal for message of out of stock -->
+			<div class="modal" id='message' tabindex="-1" role="dialog">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
-						<h5 class="modal-title">Sorry, temporarily out of stock!</h5>
+						<h5 class="modal-title" id='message-text'></h5>
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- modal of shipping information -->
+			<div class="modal fade" id="continue" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Shipping Information</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<!-- actually  exist 'vanity' zip-codes, and also Mozilla-developer warning: "telephone numbers vary so much around the world", that I'm desided not to check a lot of on front-end side. Let the checking for back-end ^^ -->
+						<form action="" id='shipping'>
+							<input type="text" name='name' placeholder="Your name" required>
+							<input type="text" name='zip' placeholder="ZIP" maxlength="10" required>
+							<input type="text" name='street' autocomplete="on" placeholder="Street" required>
+							<input type="text" name='city' autocomplete="on" placeholder="City" required>
+							<input type="text" name='region' autocomplete="on" placeholder="Region" required>
+							<input type="text" name='country' autocomplete="on" placeholder="Country" required>
+							<input type="tel" name='phone' placeholder="Phone (only numbers, example: 1234567)" maxlength="20" pattern="\d{3,15}" required>
+							<input type="email" name='mail' placeholder="Your e-mail" required>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<input type="submit" class="btn" value="Submit" form="shipping">
+						<input type="reset" class="btn" value="Reset" form="shipping">
+						<input type="button" class="btn" id='close-shipping' data-dismiss="modal" value='Close'>
+					</div>
 					</div>
 				</div>
 			</div>

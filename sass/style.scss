@@ -136,6 +136,7 @@ p {
 }
 .cart {
 	position: relative;
+	cursor: pointer;
 	transition-duration: 0.5s;
 
     &:hover {
@@ -260,6 +261,35 @@ p {
 	button:focus {
 		outline: none;
 	}
+}
+
+.btn {
+	@include glassGradient;
+	@include hText;
+	border-radius: 50px;
+	box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3), -3px 3px 1px rgba(0, 0, 0, 0.2);
+	color: floralwhite;
+
+	&:focus{
+		outline: none;
+		box-shadow: none;
+	}
+	&:active {
+		box-shadow: inset -5px 3px 5px rgba(0, 0, 0, 0.3), inset 5px -3px 3px rgba(255, 255, 255, 0.2);
+	}
+}
+
+form {
+	display: flex;
+    flex-direction: column;
+
+    input {
+    	margin: 10px 0;
+    	padding: 5px;
+    }
+}
+.shop .modal-footer {
+	justify-content: flex-start;
 }
 
 
