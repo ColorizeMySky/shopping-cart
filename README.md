@@ -1,3 +1,6 @@
+My result of this project:
+http://colorizemysky-shopping-cart.surge.sh
+
 # shopping-cart
 
 A simple shopping cart frontend written. In this exercise, you will be implementing a Shopping Cart Page. Provided for you is a simple HTML page with Bootstrap that shows items and a section for the shopping cart your task is to implement the following features:
