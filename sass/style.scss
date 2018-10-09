@@ -52,10 +52,8 @@ $textShadow: 1px 1px 1px rgba(0, 0, 0, 0.5),
 	background-color: #fff;
 	z-index: 5;
 	border: 2px solid rgb(70, 70, 80);
-	//background-image: url('http://365psd.ru/images/backgrounds/skull.jpg');
-	background-image: url('http://365psd.ru/images/backgrounds/metall-pat-005.jpg');
+	background-image: url('../img/metall-pat-005.jpg');
 }
-
 
 body {
 	background: {
@@ -111,10 +109,6 @@ p {
 		p {
 			margin-bottom: 0;
 		}
-	}
-
-	&:nth-of-type(6) .wrapper-img {
-	    transform: scaleY(0.8);
 	}
 }
 .wrapper-img {
@@ -180,7 +174,6 @@ p {
 	border: 2px solid rgb(70, 70, 80);
 	transition-delay: 1.2s;
 }
-
 .change-view {
 	&::before, &::after {
 		animation: closeHolders 3s forwards;
@@ -194,7 +187,6 @@ p {
 .invisible {
 	opacity: 0;
 }
-
 .shopping {
 	@include glassGradient;
 	@include innerShadow;
@@ -216,7 +208,7 @@ p {
 	animation: appearCart 0.7s; //name duration timing-function delay iteration-count direction fill-mode;
 }
 .disappearCart {
-	animation: disappearCart 0.7s forwards;//name duration timing-function delay iteration-count direction fill-mode;
+	animation: disappearCart 0.7s forwards;
 }
 .item-info {
 	display: flex;
@@ -241,7 +233,6 @@ p {
     	}
     }
 }
-
 .shop .modal-content {
 	@include glassGradient;
 	@include hText;
@@ -262,7 +253,6 @@ p {
 		outline: none;
 	}
 }
-
 .btn {
 	@include glassGradient;
 	@include hText;
@@ -278,7 +268,6 @@ p {
 		box-shadow: inset -5px 3px 5px rgba(0, 0, 0, 0.3), inset 5px -3px 3px rgba(255, 255, 255, 0.2);
 	}
 }
-
 form {
 	display: flex;
     flex-direction: column;

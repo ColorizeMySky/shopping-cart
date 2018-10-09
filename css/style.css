@@ -1,4 +1,4 @@
-/* line 60, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 body {
   background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
@@ -8,29 +8,29 @@ body {
   color: floralwhite;
 }
 
-/* line 70, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 p {
   text-shadow: -3px 3px rgba(0, 0, 0, 0.5), 1px 1px 1px rgba(0, 0, 0, 0.5), -1px 1px 1px rgba(0, 0, 0, 0.5), 1px -1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5);
 }
 
-/* line 73, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 .container {
   margin-bottom: 50px;
 }
 
-/* line 76, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 .navbar {
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.1) 15%, rgba(61, 32, 99, 0.15) 20%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 50%, rgba(105, 208, 255, 0.15) 60%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.2) 85%, rgba(255, 255, 255, 0));
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
 }
 
-/* line 80, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 .card-deck {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* line 84, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 .shop .card {
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.1) 15%, rgba(61, 32, 99, 0.15) 20%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 50%, rgba(105, 208, 255, 0.15) 60%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.2) 85%, rgba(255, 255, 255, 0));
   position: relative;
@@ -39,7 +39,7 @@ p {
   border-width: 4px;
   box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3), -3px 3px 1px rgba(0, 0, 0, 0.2);
 }
-/* line 93, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 .shop .card::before {
   box-shadow: inset 0 0 2px 1px #000, inset 0 0 5px 1px rgba(255, 255, 255, 0.3);
   content: "";
@@ -50,13 +50,13 @@ p {
   background-color: #fff;
   z-index: 5;
   border: 2px solid #464650;
-  background-image: url("http://365psd.ru/images/backgrounds/metall-pat-005.jpg");
+  background-image: url("../img/metall-pat-005.jpg");
   top: -5px;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
-/* line 100, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 .shop .card::after {
   box-shadow: inset 0 0 2px 1px #000, inset 0 0 5px 1px rgba(255, 255, 255, 0.3);
   content: "";
@@ -67,26 +67,22 @@ p {
   background-color: #fff;
   z-index: 5;
   border: 2px solid #464650;
-  background-image: url("http://365psd.ru/images/backgrounds/metall-pat-005.jpg");
+  background-image: url("../img/metall-pat-005.jpg");
   bottom: -5px;
   clip-path: polygon(0 0%, 100% 50%, 100% 100%, 0% 100%);
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-/* line 108, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
 .shop .card .card-body {
   margin-bottom: 50px;
 }
-/* line 111, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 .shop .card .card-body p {
   margin-bottom: 0;
 }
-/* line 116, ../sass/style.scss */
-.shop .card:nth-of-type(6) .wrapper-img {
-  transform: scaleY(0.8);
-}
 
-/* line 120, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 .wrapper-img {
   display: flex;
   justify-content: center;
@@ -94,14 +90,14 @@ p {
   margin-top: 40px;
 }
 
-/* line 124, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 .card-img-top {
   max-width: 70%;
   margin: 0 auto;
   filter: drop-shadow(-7px 6px 3px rgba(0, 0, 0, 0.3));
 }
 
-/* line 129, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 .card-title {
   font-family: 'Kanit', sans-serif;
   text-align: center;
@@ -110,28 +106,28 @@ p {
   font-size: 22px;
 }
 
-/* line 133, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 .button-holder {
   display: flex;
   justify-content: flex-end;
 }
 
-/* line 137, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 .cart {
   position: relative;
   cursor: pointer;
   transition-duration: 0.5s;
 }
-/* line 142, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 .cart:hover {
   transform: scale(1.1);
 }
-/* line 146, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .cart:focus img, .cart:active img {
   filter: drop-shadow(1px 1px rgba(255, 255, 255, 0));
   transform: scale(0.9);
 }
-/* line 152, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 .cart img {
   max-width: 50px;
   height: auto;
@@ -139,7 +135,7 @@ p {
   filter: drop-shadow(1px 1px rgba(255, 255, 255, 0.3));
 }
 
-/* line 159, ../sass/style.scss */
+/* line 153, ../sass/style.scss */
 .details {
   position: absolute;
   width: 100%;
@@ -149,7 +145,7 @@ p {
   z-index: 6;
 }
 
-/* line 167, ../sass/style.scss */
+/* line 161, ../sass/style.scss */
 .shadow-for-holder {
   position: absolute;
   top: 0px;
@@ -162,7 +158,7 @@ p {
   z-index: 10;
 }
 
-/* line 174, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 .backside {
   box-shadow: inset 0 0 2px 1px #000, inset 0 0 5px 1px rgba(255, 255, 255, 0.3);
   position: absolute;
@@ -177,22 +173,22 @@ p {
   transition-delay: 1.2s;
 }
 
-/* line 185, ../sass/style.scss */
+/* line 178, ../sass/style.scss */
 .change-view::before, .change-view::after {
   animation: closeHolders 3s forwards;
 }
 
-/* line 190, ../sass/style.scss */
+/* line 183, ../sass/style.scss */
 .change-view-back::before, .change-view-back::after {
   animation: openHolders 3s forwards;
 }
 
-/* line 194, ../sass/style.scss */
+/* line 187, ../sass/style.scss */
 .invisible {
   opacity: 0;
 }
 
-/* line 198, ../sass/style.scss */
+/* line 190, ../sass/style.scss */
 .shopping {
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.1) 15%, rgba(61, 32, 99, 0.15) 20%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 50%, rgba(105, 208, 255, 0.15) 60%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.2) 85%, rgba(255, 255, 255, 0));
   box-shadow: inset 0 0 2px 1px #000, inset 0 0 5px 1px rgba(255, 255, 255, 0.3);
@@ -201,7 +197,7 @@ p {
   border-radius: 25px;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), -1px 1px 1px rgba(0, 0, 0, 0.5), 1px -1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5);
 }
-/* line 206, ../sass/style.scss */
+/* line 198, ../sass/style.scss */
 .shopping h1 {
   font-family: 'Kanit', sans-serif;
   text-align: center;
@@ -209,47 +205,47 @@ p {
   text-shadow: -7px 7px 2px rgba(0, 0, 0, 0.3), 1px 1px 1px rgba(0, 0, 0, 0.5), -1px 1px 1px rgba(0, 0, 0, 0.5), 1px -1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5);
   font-size: 25px;
 }
-/* line 211, ../sass/style.scss */
+/* line 203, ../sass/style.scss */
 .shopping hr {
   border-color: rgba(0, 0, 0, 0.3);
 }
 
-/* line 215, ../sass/style.scss */
+/* line 207, ../sass/style.scss */
 .appearCart {
   animation: appearCart 0.7s;
 }
 
-/* line 218, ../sass/style.scss */
+/* line 210, ../sass/style.scss */
 .disappearCart {
   animation: disappearCart 0.7s forwards;
 }
 
-/* line 221, ../sass/style.scss */
+/* line 213, ../sass/style.scss */
 .item-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-/* line 226, ../sass/style.scss */
+/* line 218, ../sass/style.scss */
 .item-info > span:nth-child(1) {
   padding-right: 10px;
 }
-/* line 230, ../sass/style.scss */
+/* line 222, ../sass/style.scss */
 .item-info .cost {
   display: inline;
 }
-/* line 233, ../sass/style.scss */
+/* line 225, ../sass/style.scss */
 .item-info .cost img {
   height: 1em;
   margin-top: -0.2em;
   box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-/* line 238, ../sass/style.scss */
+/* line 230, ../sass/style.scss */
 .item-info .cost img:active {
   box-shadow: 0 0 2px black;
 }
 
-/* line 245, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 .shop .modal-content {
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.1) 15%, rgba(61, 32, 99, 0.15) 20%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 50%, rgba(105, 208, 255, 0.15) 60%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.2) 85%, rgba(255, 255, 255, 0));
   font-family: 'Kanit', sans-serif;
@@ -258,23 +254,23 @@ p {
   text-shadow: -7px 7px 2px rgba(0, 0, 0, 0.3), 1px 1px 1px rgba(0, 0, 0, 0.5), -1px 1px 1px rgba(0, 0, 0, 0.5), 1px -1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5);
   border-radius: 25px;
 }
-/* line 250, ../sass/style.scss */
+/* line 241, ../sass/style.scss */
 .shop .modal-content .modal-title {
   margin-top: 25px;
 }
-/* line 254, ../sass/style.scss */
+/* line 245, ../sass/style.scss */
 .shop .modal-content .close, .shop .modal-content .close:hover {
   color: floralwhite;
   font-size: 3rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), -1px 1px 1px rgba(0, 0, 0, 0.5), 1px -1px 1px rgba(0, 0, 0, 0.5), -1px -1px 1px rgba(0, 0, 0, 0.5);
   opacity: 1;
 }
-/* line 261, ../sass/style.scss */
+/* line 252, ../sass/style.scss */
 .shop .modal-content button:focus {
   outline: none;
 }
 
-/* line 266, ../sass/style.scss */
+/* line 256, ../sass/style.scss */
 .btn {
   background: linear-gradient(-45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4) 10%, rgba(255, 255, 255, 0.1) 15%, rgba(61, 32, 99, 0.15) 20%, rgba(255, 255, 255, 0.2) 40%, rgba(255, 255, 255, 0.1) 50%, rgba(105, 208, 255, 0.15) 60%, rgba(255, 255, 255, 0.5) 75%, rgba(255, 255, 255, 0.2) 85%, rgba(255, 255, 255, 0));
   font-family: 'Kanit', sans-serif;
@@ -285,63 +281,63 @@ p {
   box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3), -3px 3px 1px rgba(0, 0, 0, 0.2);
   color: floralwhite;
 }
-/* line 273, ../sass/style.scss */
+/* line 263, ../sass/style.scss */
 .btn:focus {
   outline: none;
   box-shadow: none;
 }
-/* line 277, ../sass/style.scss */
+/* line 267, ../sass/style.scss */
 .btn:active {
   box-shadow: inset -5px 3px 5px rgba(0, 0, 0, 0.3), inset 5px -3px 3px rgba(255, 255, 255, 0.2);
 }
 
-/* line 282, ../sass/style.scss */
+/* line 271, ../sass/style.scss */
 form {
   display: flex;
   flex-direction: column;
 }
-/* line 286, ../sass/style.scss */
+/* line 275, ../sass/style.scss */
 form input {
   margin: 10px 0;
   padding: 5px;
 }
 
-/* line 291, ../sass/style.scss */
+/* line 280, ../sass/style.scss */
 .shop .modal-footer {
   justify-content: flex-start;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-  /* line 298, ../sass/style.scss */
+  /* line 287, ../sass/style.scss */
   .shop {
     flex-direction: row-reverse;
   }
 
-  /* line 301, ../sass/style.scss */
+  /* line 290, ../sass/style.scss */
   .card-deck {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 767.98px) {
-  /* line 307, ../sass/style.scss */
+  /* line 296, ../sass/style.scss */
   .shop {
     flex-direction: row-reverse;
   }
 
-  /* line 310, ../sass/style.scss */
+  /* line 299, ../sass/style.scss */
   .shop .card-deck {
     display: flex;
     flex-direction: column;
   }
 }
 @media (min-width: 992px) {
-  /* line 318, ../sass/style.scss */
+  /* line 307, ../sass/style.scss */
   .shop aside {
     padding-right: 0;
     padding-left: 0;
   }
 
-  /* line 322, ../sass/style.scss */
+  /* line 311, ../sass/style.scss */
   .shopping {
     position: fixed;
   }

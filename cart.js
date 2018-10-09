@@ -1,5 +1,5 @@
 //all img to one height
-equalHeightImg();
+$(window).on('load', equalHeightImg);
 
 function equalHeightImg() {
 	let height = 0;
@@ -138,7 +138,6 @@ class Cart {
 		$('.shopping').removeClass('appearCart')
 		$('.shopping').addClass('disappearCart');
 	}
-
 	clearCart() {
 		for (var key in this.items) {
 			this.items[key].pieces = 0;
@@ -181,7 +180,6 @@ $('.minus').each(function() {
 			myCart.removeItem(chooseId);
 		});
 });
-
 
 $('#shipping').submit(function(event) {
 	event.preventDefault();
