@@ -31,7 +31,7 @@
 							<h5 class="card-title">Death Star</h5>
 							<p>Price: 20 bln</p>
 							<div class="button-holder">
-								<buttion class="cart"><img src="img/cart.png" alt="Add to cart"></button>
+								<buttion class="cart" id='deathstar'><img src="img/cart.png" alt="Add to cart"></button>
 							</div>
 						</div>
 
@@ -57,7 +57,7 @@
 							<h5 class="card-title">Infinity Gauntlet</h5>
 							<p>Price: 230 bln</p>
 							<div class="button-holder">
-								<buttion class="cart"><img src="img/cart.png" alt="Add to cart"></button>
+								<buttion class="cart" id='infinitygauntlet'><img src="img/cart.png" alt="Add to cart"></button>
 							</div>							
 						</div>
 
@@ -80,7 +80,7 @@
 							<h5 class="card-title">Tyrant Virus</h5>							
 							<p>Price: 5 bln</p>
 							<div class="button-holder">
-								<buttion class="cart"><img src="img/cart.png" alt="Add to cart"></button>
+								<buttion class="cart" id='tyrantvirus'><img src="img/cart.png" alt="Add to cart"></button>
 							</div>
 						</div>
 
@@ -106,7 +106,7 @@
 							<h5 class="card-title">Doomsday Device</h5>
 							<p>Price: 100 bln</p>
 							<div class="button-holder">
-								<buttion class="cart"><img src="img/cart.png" alt="Add to cart"></button>
+								<buttion class="cart" id='ddd'><img src="img/cart.png" alt="Add to cart"></button>
 							</div>
 						</div>
 
@@ -129,7 +129,7 @@
 							<h5 class="card-title">Reality Bomb</h5>
 							<p>Price: 400 bln</p>
 							<div class="button-holder">
-								<buttion class="cart"><img src="img/cart.png" alt="Add to cart"></button>
+								<buttion class="cart" id='realitybomb'><img src="img/cart.png" alt="Add to cart"></button>
 							</div>
 						</div>
 
@@ -154,7 +154,7 @@
 							<h5 class="card-title">Halo</h5>
 							<p>Price: 13 bln</p>
 							<div class="button-holder">
-								<buttion class="cart"><img src="img/cart.png" alt="Add to cart"></button>
+								<buttion class="cart" id='halo'><img src="img/cart.png" alt="Add to cart"></button>
 							</div>
 						</div>
 
@@ -177,7 +177,7 @@
 							<h5 class="card-title">Little Doctor</h5>
 							<p>Price: 90 bln</p>
 							<div class="button-holder">
-								<buttion class="cart"><img src="img/cart.png" alt="Add to cart"></button>
+								<buttion class="cart" id='littledoctor'><img src="img/cart.png" alt="Add to cart"></button>
 							</div>
 						</div>
 
@@ -200,7 +200,7 @@
 							<h5 class="card-title">Crowbar</h5>
 							<p>Price: 500 bln</p>
 							<div class="button-holder">
-								<buttion class="cart"><img src="img/cart.png" alt="Add to cart"></button>
+								<buttion class="cart" id='crowbar'><img src="img/cart.png" alt="Add to cart"></button>
 							</div>
 						</div>
 
@@ -211,13 +211,114 @@
 							<p>The most fabulous weapon all over the galaxy. Limited edition.</p>
 						</div>
 					</div>
-
-				</div>
-				
+				</div>				
 			</main>
+
 			<aside class="col-12 col-lg-3">
+				<div class="shopping d-none">
+					<h1>Shopping Cart</h1>
+					<div class="items">
+						<div id='crowbar-info' class='item-info d-none'>
+							<span>Crowbar</span>
+							<div class='cost'>
+								<span class="money"></span>
+								<img src="img/minus.png" class='minus' alt="-">
+								<span class="pieses"></span>
+								<img src="img/plus.png" class='plus' alt="+">								
+							</div>
+						</div>
+
+						<div id='deathstar-info' class='item-info d-none'>
+							<span>Death Star</span>
+							<div class='cost'>
+								<span class="money"></span>
+								<img src="img/minus.png" class='minus' alt="-">
+								<span class="pieses"></span>
+								<img src="img/plus.png" class='plus' alt="+">								
+							</div>
+						</div>
+
+						<div id='ddd-info' class='item-info d-none'>
+							<span>Doomsday Device</span>
+							<div class='cost'>
+								<span class="money"></span>
+								<img src="img/minus.png" class='minus' alt="-">								
+								<span class="pieses"></span>
+								<img src="img/plus.png" class='plus' alt="+">
+							</div>
+						</div>
+
+						<div id='halo-info' class='item-info d-none'>
+							<span>Halo</span>
+							<div class='cost'>
+								<span class="money"></span>
+								<img src="img/minus.png" class='minus' alt="-">
+								<span class="pieses"></span>
+								<img src="img/plus.png" class='plus' alt="+">								
+							</div>
+						</div>
+
+						<div id='infinitygauntlet-info' class='item-info d-none'>
+							<span>Infinity Gauntlet</span>
+							<div class='cost'>
+								<span class="money"></span>
+								<img src="img/minus.png" class='minus' alt="-">
+								<span class="pieses"></span>
+								<img src="img/plus.png" class='plus' alt="+">								
+							</div>
+						</div>
+
+						<div id='littledoctor-info' class='item-info d-none'>
+							<span>Little Doctor</span>
+							<div class='cost'>
+								<span class="money"></span>
+								<img src="img/minus.png" class='minus' alt="-">
+								<span class="pieses"></span>
+								<img src="img/plus.png" class='plus' alt="+">								
+							</div>
+						</div>
+
+						<div id='realitybomb-info' class='item-info d-none'>
+							<span>Reality Bomb</span>
+							<div class='cost'>
+								<span class="money"></span>
+								<img src="img/minus.png" class='minus' alt="-">
+								<span class="pieses"></span>
+								<img src="img/plus.png" class='plus' alt="+">								
+							</div>
+						</div>
+
+						<div id='tyrantvirus-info' class='item-info d-none'>
+							<span>Tyrant Virus</span>
+							<div class='cost'>
+								<span class="money"></span>
+								<img src="img/minus.png" class='minus' alt="-">
+								<span class="pieses"></span>
+								<img src="img/plus.png" class='plus' alt="+">								
+							</div>
+						</div>	
+					</div>
 				
+					<div class="amount">
+						<hr>
+						<p class="subtotal">Subtotal: <span></span> </p>
+						<p class="tax">Tax: <span></span></p>
+						<p class="total">Total Price: <span></span></p>					
+					</div>
+				</div>
 			</aside>
+
+			<div class="modal" tabindex="-1" role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<h5 class="modal-title">Sorry, temporarily out of stock!</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</div>
 	<!-- energy of devastation takes from http://scifi-weapons.com -->

@@ -28,6 +28,16 @@ $textShadow: 1px 1px 1px rgba(0, 0, 0, 0.5),
 	        rgba(255, 255, 255, 0.2) 85%,
 	        rgba(255, 255, 255, 0));
 }
+@mixin hText {
+	font: {
+		family: 'Kanit', sans-serif;
+	}
+	text: {
+		align: center;
+		transform: uppercase;
+		shadow: -7px 7px 2px rgba(0, 0, 0, 0.3), $textShadow;
+	}
+}
 @mixin innerShadow {
 	box-shadow: inset 0 0 2px 1px #000,
 				inset 0 0 5px 1px rgba(255, 255, 255, 0.3);
@@ -55,6 +65,7 @@ body {
         position-x: center;
         attachment: fixed;
     }
+    color: floralwhite;
 }
 p {
 	text-shadow: -3px 3px rgba(0, 0, 0, 0.5), $textShadow;
@@ -65,10 +76,6 @@ p {
 .navbar {
 	@include glassGradient;
 	box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
-
-	& span {
-		color: floralwhite;
-	}
 }
 .card-deck {
 	display: grid;
@@ -82,7 +89,6 @@ p {
 	border-width: 4px;
 	box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3),
 				-3px 3px 1px rgba(0, 0, 0, 0.2);
-    color: floralwhite;
 
 	&::before {
 		@include metallHolders;
@@ -121,15 +127,8 @@ p {
     filter: drop-shadow(-7px 6px 3px rgba(0, 0, 0, 0.3));
 }
 .card-title {
-	font: {
-		family: 'Kanit', sans-serif;
-		size: 22px;
-	}
-	text: {
-		align: center;
-		transform: uppercase;
-		shadow: -7px 7px 2px rgba(0, 0, 0, 0.3), $textShadow;
-	}
+	@include hText;
+	font-size: 22px;
 }
 .button-holder {
 	display: flex;
@@ -195,6 +194,74 @@ p {
 	opacity: 0;
 }
 
+.shopping {
+	@include glassGradient;
+	@include innerShadow;
+	margin-top: 50px;
+	padding: 20px 12px;
+	border-radius: 25px;
+	text-shadow: $textShadow;
+
+	h1 {
+		@include hText;
+		font-size: 25px;
+	}
+
+	hr {
+		border-color: rgba(0, 0, 0, 0.3);
+	}
+}
+.appearCart {
+	animation: appearCart 0.7s; //name duration timing-function delay iteration-count direction fill-mode;
+}
+.disappearCart {
+	animation: disappearCart 0.7s forwards;//name duration timing-function delay iteration-count direction fill-mode;
+}
+.item-info {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > span:nth-child(1) {
+    	padding-right: 10px;
+    }
+
+    .cost {
+    	display: inline;
+
+    	img {
+    		height: 1em;
+   		    margin-top: -0.2em;
+   		    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.5);
+
+   		    &:active {
+   		    	box-shadow: 0 0 2px rgba(0, 0, 0, 1);
+   		    }
+    	}
+    }
+}
+
+.shop .modal-content {
+	@include glassGradient;
+	@include hText;
+	border-radius: 25px;
+
+	.modal-title {
+		margin-top: 25px;
+	}
+
+	.close, .close:hover {
+		color: floralwhite;
+		font-size: 3rem;
+		text-shadow: $textShadow;
+		opacity: 1;
+	}
+
+	button:focus {
+		outline: none;
+	}
+}
+
 
 //MEDIA QUERIES
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -215,6 +282,16 @@ p {
 		flex-direction: column;
 	}
 
+}
+
+@media (min-width: 992px) {
+	.shop aside {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.shopping {
+		position: fixed;
+	}
 }
 
 //KEYFRAMES: ;
@@ -247,5 +324,28 @@ p {
 	}
 	100% {
 		height: 20%;
+	}
+}
+
+@keyframes appearCart {
+	0% {
+		opacity: 0;
+		transform: scale3d(0.3, 0.3, 0.3);
+	}
+	50% {
+		opacity: 1;
+	}
+}
+
+@keyframes disappearCart {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+		transform: scale3d(0.3, 0.3, 0.3);
+	}
+	100% {
+		opacity: 0;
 	}
 }
