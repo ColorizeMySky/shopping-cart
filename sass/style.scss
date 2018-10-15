@@ -129,19 +129,26 @@ p {
 	justify-content: flex-end;
 }
 .cart {
-	position: relative;
-	cursor: pointer;
+	position: relative;	
+	background: transparent;
+    border: none;
+    cursor: pointer;
 	transition-duration: 0.5s;
 
     &:hover {
 		transform: scale(1.1);
     }
-    &:focus, &:active {
+    &:focus {
+    	outline: none;    	
+    }
+    &:active {
+    	outline: none;
+    	
     	img {
 			filter: drop-shadow(1px 1px rgba(255, 255, 255, 0.0));
 			transform: scale(0.9);
-    	}
-    }
+		}
+	}
 
 	img {
 	max-width: 50px;
